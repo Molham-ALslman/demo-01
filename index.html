@@ -162,7 +162,7 @@
     class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white"
   >
     <header
-      class="fixed top-0 w-full z-50 border-b border-slate-200/60 dark:border-white/5 bg-white/70 dark:bg-background-dark/80 backdrop-blur-md"
+      class="absolute top-0 w-full z-50 border-b border-slate-200/60 dark:border-white/5 bg-white/70 dark:bg-background-dark/80 backdrop-blur-md"
     >
       <nav
         class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
@@ -845,7 +845,7 @@
       });
       function initGsapScroll(SizeScreen) {
         if (!window.gsap || !window.ScrollTrigger) return;
-        
+
 
         const gsap = window.gsap;
         const ScrollTrigger = window.ScrollTrigger;
@@ -927,7 +927,7 @@
             ease: "none",
             scrollTrigger: {
               trigger: ".video-section",
-              start: "top top",
+              start: "top 15%",
               end: "+=100%",
               scrub: true,
               pin: ".video-section",
@@ -980,7 +980,7 @@
               ease: "none",
               scrollTrigger: {
                 trigger: portfolioSection,
-                start: "top top",
+                start: "top 15%",
                 end: "+=" + trackWidth, // طول التمرير يعتمد على العرض الكلي للمسار
                 scrub: true,
                 pin: true, // تثبيت القسم أثناء التمرير
